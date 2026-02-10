@@ -9,7 +9,7 @@ def main():
     parser.add_argument('--max-tokens', type=int, default=4096)
     args = parser.parse_args()
 
-    device = args.device
+    device = args.device.upper()
     if ',' in device:
         device = f"MULTI:{device}"
 
